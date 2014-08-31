@@ -57,6 +57,8 @@ trait Tree
 
     /**
      * @var self
+     *
+     * @Gedmo\TreeParent
      */
     private $parent;
 
@@ -86,20 +88,6 @@ trait Tree
     }
 
     /**
-     * Sets the left
-     *
-     * @param integer $left
-     *
-     * @return self
-     */
-    public function setLeft($left)
-    {
-        $this->left = $left;
-
-        return $this;
-    }
-
-    /**
      * Returns the right
      *
      * @return integer
@@ -110,20 +98,6 @@ trait Tree
     }
 
     /**
-     * Sets the right
-     *
-     * @param integer $right
-     *
-     * @return self
-     */
-    public function setRight($right)
-    {
-        $this->right = $right;
-
-        return $this;
-    }
-
-    /**
      * Returns the level
      *
      * @return integer
@@ -131,20 +105,6 @@ trait Tree
     public function getLevel()
     {
         return $this->level;
-    }
-
-    /**
-     * Sets the level
-     *
-     * @param integer $level
-     *
-     * @return self
-     */
-    public function setLevel($level)
-    {
-        $this->level = $level;
-
-        return $this;
     }
 
     /**

@@ -58,11 +58,8 @@ class BehaviorTest extends Test
 
 	/**
 	 * @covers Indigo\Doctrine\Behavior\Tree::getLeft
-	 * @covers Indigo\Doctrine\Behavior\Tree::setLeft
 	 * @covers Indigo\Doctrine\Behavior\Tree::getRight
-	 * @covers Indigo\Doctrine\Behavior\Tree::setRight
 	 * @covers Indigo\Doctrine\Behavior\Tree::getLevel
-	 * @covers Indigo\Doctrine\Behavior\Tree::setLevel
 	 * @covers Indigo\Doctrine\Behavior\Tree::getParent
 	 * @covers Indigo\Doctrine\Behavior\Tree::setParent
 	 * @covers Indigo\Doctrine\Behavior\Tree::getChildren
@@ -77,12 +74,9 @@ class BehaviorTest extends Test
 		$parent = new \DummyEntity;
 		$child = new \DummyEntity;
 
-		$this->assertSame($this->entity, $this->entity->setLeft(1));
-		$this->assertEquals(1, $this->entity->getLeft());
-		$this->assertSame($this->entity, $this->entity->setRight(1));
-		$this->assertEquals(1, $this->entity->getRight());
-		$this->assertSame($this->entity, $this->entity->setLevel(1));
-		$this->assertEquals(1, $this->entity->getLevel());
+		$this->assertNull($this->entity->getLeft());
+		$this->assertNull($this->entity->getRight());
+		$this->assertNull($this->entity->getLevel());
 		$this->assertSame($this->entity, $this->entity->setParent($parent));
 		$this->assertSame($parent, $this->entity->getParent());
 		$this->assertSame($this->entity, $this->entity->addChild($child));
