@@ -22,6 +22,9 @@ trait Slug
 {
     /**
      * @var string
+     *
+     * @ORM\Column(type="string")
+     * @Gedmo\Slug(fields={"name"}, unique=true)
      */
     private $slug;
 
