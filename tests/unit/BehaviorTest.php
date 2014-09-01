@@ -60,6 +60,7 @@ class BehaviorTest extends Test
 	 * @covers Indigo\Doctrine\Behavior\Tree::getLeft
 	 * @covers Indigo\Doctrine\Behavior\Tree::getRight
 	 * @covers Indigo\Doctrine\Behavior\Tree::getLevel
+	 * @covers Indigo\Doctrine\Behavior\Tree::getRoot
 	 * @covers Indigo\Doctrine\Behavior\Tree::getParent
 	 * @covers Indigo\Doctrine\Behavior\Tree::setParent
 	 * @covers Indigo\Doctrine\Behavior\Tree::getChildren
@@ -77,6 +78,7 @@ class BehaviorTest extends Test
 		$this->assertNull($this->entity->getLeft());
 		$this->assertNull($this->entity->getRight());
 		$this->assertNull($this->entity->getLevel());
+		$this->assertNull($this->entity->getRoot());
 		$this->assertSame($this->entity, $this->entity->setParent($parent));
 		$this->assertSame($parent, $this->entity->getParent());
 		$this->assertSame($this->entity, $this->entity->addChild($child));

@@ -108,6 +108,16 @@ trait Tree
     }
 
     /**
+     * Returns the root
+     *
+     * @return integer
+     */
+    public function getRoot()
+    {
+        return $this->root;
+    }
+
+    /**
      * Returns the parent
      *
      * @return self
