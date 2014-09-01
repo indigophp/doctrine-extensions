@@ -11,8 +11,6 @@
 
 namespace Indigo\Doctrine\Behavior;
 
-use Doctrine\ORM\Mapping as ORM;
-
 /**
  * Use this trait to implement sluggable behavior on entities
  *

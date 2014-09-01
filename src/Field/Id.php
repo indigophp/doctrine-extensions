@@ -11,8 +11,6 @@
 
 namespace Indigo\Doctrine\Field;
 
-use Doctrine\ORM\Mapping as ORM;
-
 /**
  * Use this trait to implement ID field on entities
  *
