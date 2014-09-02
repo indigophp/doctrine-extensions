@@ -19,16 +19,6 @@ namespace Indigo\Doctrine\Behavior\Timestamp;
 trait Timestamp
 {
     /**
-     * @Gedmo\Timestampable(on="create")
-     */
-    private $createdAt;
-
-    /**
-     * @Gedmo\Timestampable(on="update")
-     */
-    private $updatedAt;
-
-    /**
      * Returns creation time
      *
      * @return mixed

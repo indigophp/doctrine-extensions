@@ -23,6 +23,7 @@ trait Integer
     /**
      * @var integer
      *
+     * @Gedmo\Timestampable(on="create")
      * @ORM\Column(name="created_at", type="integer")
      */
     private $createdAt;
@@ -30,6 +31,7 @@ trait Integer
     /**
      * @var integer
      *
+     * @Gedmo\Timestampable(on="update")
      * @ORM\Column(name="updated_at", type="integer")
      */
     private $updatedAt;

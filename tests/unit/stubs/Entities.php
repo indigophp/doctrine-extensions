@@ -31,6 +31,18 @@ class DummyEntity
     use \Indigo\Doctrine\Behavior\Tree;
     use \Indigo\Doctrine\Behavior\Timestamp\Integer;
 
+    /**
+     * @var self
+     *
+     * @Gedmo\TreeParent
+     */
+    private $parent;
+
+    /**
+     * @var Collection
+     */
+    private $children;
+
     public function __construct()
     {
         $this->initTree();
