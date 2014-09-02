@@ -23,14 +23,14 @@ trait Integer
     /**
      * @var integer
      *
-     * @ORM\Column(type="integer")
+     * @ORM\Column(name="created_at", type="integer")
      */
     private $createdAt;
 
     /**
      * @var integer
      *
-     * @ORM\Column(type="integer")
+     * @ORM\Column(name="updated_at", type="integer")
      */
     private $updatedAt;
 
