@@ -53,18 +53,6 @@ trait Tree
     private $root;
 
     /**
-     * @var self
-     *
-     * @Gedmo\TreeParent
-     */
-    private $parent;
-
-    /**
-     * @var Collection
-     */
-    private $children;
-
-    /**
      * Initialize tree behavior
      *
      * NOTE: Should be invoked in __construct
