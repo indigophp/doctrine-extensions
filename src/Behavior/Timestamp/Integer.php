@@ -32,7 +32,7 @@ trait Integer
      * @var integer
      *
      * @Gedmo\Timestampable(on="update")
-     * @ORM\Column(name="updated_at", type="integer")
+     * @ORM\Column(name="updated_at", type="integer", nullable=true)
      */
     private $updatedAt;
 
