@@ -61,4 +61,18 @@ class FieldTest extends Test
         $this->assertSame($this->entity, $this->entity->setDescription('test'));
         $this->assertEquals('test', $this->entity->getDescription());
     }
+
+    /**
+     * @covers Indigo\Doctrine\Field\Status::isEnabled
+     * @covers Indigo\Doctrine\Field\Status::enable
+     * @covers Indigo\Doctrine\Field\Status::disable
+     */
+    public function testStatus()
+    {
+        $this->assertTrue($this->entity->isEnabled());
+        $this->assertSame($this->entity, $this->entity->disable());
+        $this->assertFalse($this->entity->isEnabled());
+        $this->assertSame($this->entity, $this->entity->enable());
+        $this->assertTrue($this->entity->isEnabled());
+    }
 }

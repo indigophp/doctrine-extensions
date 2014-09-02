@@ -22,6 +22,7 @@ class DummyEntity
     use \Indigo\Doctrine\Field\Id;
     use \Indigo\Doctrine\Field\Name;
     use \Indigo\Doctrine\Field\Description;
+    use \Indigo\Doctrine\Field\Status;
 
     /**
      * Behaviors
@@ -47,6 +48,7 @@ class DummyEntity
     {
         $this->initTree();
         $this->initCreatedAt();
+        $this->enable();
     }
 }
 
