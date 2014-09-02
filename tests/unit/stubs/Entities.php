@@ -16,22 +16,39 @@
  */
 class DummyEntity
 {
-	/**
-	 * Fields
-	 */
-	use \Indigo\Doctrine\Field\Id;
-	use \Indigo\Doctrine\Field\Name;
-	use \Indigo\Doctrine\Field\Description;
+    /**
+     * Fields
+     */
+    use \Indigo\Doctrine\Field\Id;
+    use \Indigo\Doctrine\Field\Name;
+    use \Indigo\Doctrine\Field\Description;
 
-	/**
-	 * Behaviors
-	 */
-	use \Indigo\Doctrine\Behavior\SoftDelete;
-	use \Indigo\Doctrine\Behavior\Slug;
-	use \Indigo\Doctrine\Behavior\Tree;
+    /**
+     * Behaviors
+     */
+    use \Indigo\Doctrine\Behavior\SoftDelete;
+    use \Indigo\Doctrine\Behavior\Slug;
+    use \Indigo\Doctrine\Behavior\Tree;
+    use \Indigo\Doctrine\Behavior\Timestamp\Integer;
 
-	public function __construct()
-	{
-		$this->initTree();
-	}
+    public function __construct()
+    {
+        $this->initTree();
+        $this->initCreatedAt();
+    }
+}
+
+/**
+ * Dummy Entity
+ *
+ * @author Márk Sági-Kazár <mark.sagikazar@gmail.com>
+ */
+class DummyDateTimeEntity
+{
+    use \Indigo\Doctrine\Behavior\Timestamp\DateTime;
+
+    public function __construct()
+    {
+        $this->initCreatedAt();
+    }
 }

@@ -18,34 +18,34 @@ namespace Indigo\Doctrine\Field;
  */
 trait Name
 {
-	/**
-	 * @var string
-	 *
-	 * @ORM\Column(type="string")
-	 */
-	private $name;
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string")
+     */
+    private $name;
 
-	/**
-	 * Returns the name
-	 *
-	 * @return string
-	 */
-	public function getName()
-	{
-		return $this->name;
-	}
+    /**
+     * Returns the name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
 
-	/**
-	 * Sets the name
-	 *
-	 * @param string $name
-	 *
-	 * @return self
-	 */
-	public function setName($name)
-	{
-		$this->name = $name;
+    /**
+     * Sets the name
+     *
+     * @param string $name
+     *
+     * @return self
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
 
-		return $this;
-	}
+        return $this;
+    }
 }

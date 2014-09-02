@@ -23,29 +23,29 @@ trait Description
      *
      * @ORM\Column(type="text", nullable=true)
      */
-	private $description;
+    private $description;
 
-	/**
-	 * Returns the description
-	 *
-	 * @return string
-	 */
-	public function getDescription()
-	{
-		return $this->description;
-	}
+    /**
+     * Returns the description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
-	/**
-	 * Sets the description
-	 *
-	 * @param string $description
-	 *
-	 * @return self
-	 */
-	public function setDescription($description)
-	{
-		$this->description = $description;
+    /**
+     * Sets the description
+     *
+     * @param string $description
+     *
+     * @return self
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
 
-		return $this;
-	}
+        return $this;
+    }
 }

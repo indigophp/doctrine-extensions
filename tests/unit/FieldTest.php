@@ -22,43 +22,43 @@ use Codeception\TestCase\Test;
  */
 class FieldTest extends Test
 {
-	/**
-	 * Dummy Entity object
-	 *
-	 * @var DummyEntity
-	 */
-	protected $entity;
+    /**
+     * Dummy Entity object
+     *
+     * @var DummyEntity
+     */
+    protected $entity;
 
-	public function _before()
-	{
-		$this->entity = new \DummyEntity;
-	}
+    public function _before()
+    {
+        $this->entity = new \DummyEntity;
+    }
 
-	/**
-	 * @covers Indigo\Doctrine\Field\Id::getId
-	 */
-	public function testId()
-	{
-		$this->assertNull($this->entity->getId());
-	}
+    /**
+     * @covers Indigo\Doctrine\Field\Id::getId
+     */
+    public function testId()
+    {
+        $this->assertNull($this->entity->getId());
+    }
 
-	/**
-	 * @covers Indigo\Doctrine\Field\Name::getName
-	 * @covers Indigo\Doctrine\Field\Name::setName
-	 */
-	public function testName()
-	{
-		$this->assertSame($this->entity, $this->entity->setName('test'));
-		$this->assertEquals('test', $this->entity->getName());
-	}
+    /**
+     * @covers Indigo\Doctrine\Field\Name::getName
+     * @covers Indigo\Doctrine\Field\Name::setName
+     */
+    public function testName()
+    {
+        $this->assertSame($this->entity, $this->entity->setName('test'));
+        $this->assertEquals('test', $this->entity->getName());
+    }
 
-	/**
-	 * @covers Indigo\Doctrine\Field\Description::getDescription
-	 * @covers Indigo\Doctrine\Field\Description::setDescription
-	 */
-	public function testDescription()
-	{
-		$this->assertSame($this->entity, $this->entity->setDescription('test'));
-		$this->assertEquals('test', $this->entity->getDescription());
-	}
+    /**
+     * @covers Indigo\Doctrine\Field\Description::getDescription
+     * @covers Indigo\Doctrine\Field\Description::setDescription
+     */
+    public function testDescription()
+    {
+        $this->assertSame($this->entity, $this->entity->setDescription('test'));
+        $this->assertEquals('test', $this->entity->getDescription());
+    }
 }
