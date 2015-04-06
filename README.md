@@ -9,7 +9,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/indigophp/doctrine-extensions.svg?style=flat-square)](https://packagist.org/packages/indigophp/doctrine-extensions)
 [![Dependency Status](https://img.shields.io/versioneye/d/php/indigophp:skeleton.svg?style=flat-square)](https://www.versioneye.com/php/indigophp:skeleton)
 
-**Various doctrine extensions.**
+**Custom Doctrine extensions.**
 
 
 ## Install
