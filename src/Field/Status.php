@@ -37,25 +37,17 @@ trait Status
 
     /**
      * Sets the status to enabled
-     *
-     * @return self
      */
     public function enable()
     {
         $this->status = true;
-
-        return $this;
     }
 
     /**
      * Sets the status to disabled
-     *
-     * @return self
      */
     public function disable()
     {
         $this->status = false;
-
-        return $this;
     }
 }

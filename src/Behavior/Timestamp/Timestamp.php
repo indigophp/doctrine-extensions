@@ -32,16 +32,12 @@ trait Timestamp
      * Sets creation time
      *
      * @param integer $createdAt
-     *
-     * @return self
      */
     public function setCreatedAt($createdAt)
     {
         $this->assertValidTimestamp($createdAt);
 
         $this->createdAt = $createdAt;
-
-        return $this;
     }
 
     /**
@@ -58,16 +54,12 @@ trait Timestamp
      * Sets last updated time
      *
      * @param integer $updatedAt
-     *
-     * @return self
      */
     public function setUpdatedAt($updatedAt)
     {
         $this->assertValidTimestamp($updatedAt);
 
         $this->updatedAt = $updatedAt;
-
-        return $this;
     }
 
     /**

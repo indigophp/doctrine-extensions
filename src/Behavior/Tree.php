@@ -116,14 +116,10 @@ trait Tree
      * Sets the parent
      *
      * @param self $parent
-     *
-     * @return self
      */
     public function setParent(self $parent = null)
     {
         $this->parent = $parent;
-
-        return $this;
     }
 
     /**
@@ -152,8 +148,6 @@ trait Tree
      * Adds a child
      *
      * @param self $child
-     *
-     * @return self
      */
     public function addChild(self $child)
     {
@@ -163,8 +157,6 @@ trait Tree
 
             $this->children[] = $child;
         }
-
-        return $this;
     }
 
     /**

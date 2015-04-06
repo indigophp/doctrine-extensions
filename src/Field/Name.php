@@ -39,13 +39,9 @@ trait Name
      * Sets the name
      *
      * @param string $name
-     *
-     * @return self
      */
     public function setName($name)
     {
         $this->name = $name;
-
-        return $this;
     }
 }

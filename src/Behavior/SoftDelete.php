@@ -39,13 +39,9 @@ trait SoftDelete
      * Sets deletedAt
      *
      * @param \DateTime $deletedAt
-     *
-     * @return self
      */
     public function setDeletedAt($deletedAt)
     {
         $this->deletedAt = $deletedAt;
-
-        return $this;
     }
 }
