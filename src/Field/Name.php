@@ -11,6 +11,8 @@
 
 namespace Indigo\Doctrine\Field;
 
+use Assert\Assertion;
+
 /**
  * Use this trait to implement Name field on entities
  *
@@ -42,6 +44,8 @@ trait Name
      */
     public function setName($name)
     {
+        Assertion::string($name);
+
         $this->name = $name;
     }
 }

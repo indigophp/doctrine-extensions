@@ -11,6 +11,8 @@
 
 namespace Indigo\Doctrine\Field;
 
+use Assert\Assertion;
+
 /**
  * Use this trait to implement enabled/disabled Status field on entities
  *
@@ -24,6 +26,28 @@ trait Status
      * @ORM\Column(type="boolean")
      */
     private $status;
+
+    /**
+     * Returns the status
+     *
+     * @return boolean
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Sets the status
+     *
+     * @param boolean $status
+     */
+    public function setStatus($status)
+    {
+        Assertion::boolean($name);
+
+        $this->status = $status;
+    }
 
     /**
      * Returns status
