@@ -44,7 +44,7 @@ trait Description
      */
     public function setDescription($description)
     {
-        Assertion::string($description);
+        Assertion::nullOrString($description);
 
         $this->description = $description;
     }
