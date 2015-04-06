@@ -11,12 +11,14 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.4",
+        "beberlei/assert": "~2.3"
     },
     "require-dev": {
-        "codeception/codeception": "~2.0.0",
         "doctrine/orm": "~2.4",
-        "gedmo/doctrine-extensions": "~2.3"
+        "gedmo/doctrine-extensions": "~2.3",
+        "phpspec/phpspec": "~2.1",
+        "henrikbjorn/phpspec-code-coverage" : "~1.0"
     },
     "suggest": {
         "doctrine/orm": "Doctrine 2 ORM",
@@ -25,6 +27,11 @@
     "autoload": {
         "psr-4": {
             "Indigo\\Doctrine\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
         }
     },
     "prefer-stable": true,

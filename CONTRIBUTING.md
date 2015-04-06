@@ -2,9 +2,7 @@
 
 Contributions are **welcome** and will be fully **credited**.
 
-Check the current [todo list](https://github.com/indigophp/doctrine-extensions/blob/develop/TODO.md).
-
-We accept contributions via Pull Requests on [Github](https://github.com/indigophp/doctrine-extensions).
+We accept contributions via Pull Requests on [Github](/../../).
 
 
 ## Pull Requests
@@ -61,7 +59,7 @@ By making a contribution to this project, I certify that:
 ## Testing
 
 ``` bash
-$ codecept run
+$ phpspec run
 ```
 
 

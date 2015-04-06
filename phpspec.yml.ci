@@ -1,0 +1,10 @@
+suites:
+  doctrine_suite:
+    namespace: Indigo\Doctrine
+    psr4_prefix: Indigo\Doctrine
+extensions:
+  - PhpSpec\Extension\CodeCoverageExtension
+formatter.name: pretty
+code_coverage:
+  format: clover
+  output: build/coverage.xml

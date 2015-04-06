@@ -1,23 +1,23 @@
 # Indigo Doctrine Extensions
 
-[![Build Status](https://travis-ci.org/indigophp/doctrine-extensions.svg?branch=develop)](https://travis-ci.org/indigophp/doctrine-extensions)
-[![Latest Stable Version](https://poser.pugx.org/indigophp/doctrine-extensions/v/stable.png)](https://packagist.org/packages/indigophp/doctrine-extensions)
-[![Total Downloads](https://poser.pugx.org/indigophp/doctrine-extensions/downloads.png)](https://packagist.org/packages/indigophp/doctrine-extensions)
-[![License](https://poser.pugx.org/indigophp/doctrine-extensions/license.png)](https://packagist.org/packages/indigophp/doctrine-extensions)
+[![Latest Version](https://img.shields.io/github/release/indigophp/doctrine-extensions.svg?style=flat-square)](https://github.com/indigophp/doctrine-extensions/releases)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![Build Status](https://img.shields.io/travis/indigophp/doctrine-extensions.svg?style=flat-square)](https://travis-ci.org/indigophp/doctrine-extensions)
+[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/indigophp/doctrine-extensions.svg?style=flat-square)](https://scrutinizer-ci.com/g/indigophp/doctrine-extensions)
+[![Quality Score](https://img.shields.io/scrutinizer/g/indigophp/doctrine-extensions.svg?style=flat-square)](https://scrutinizer-ci.com/g/indigophp/doctrine-extensions)
+[![HHVM Status](https://img.shields.io/hhvm/indigophp/doctrine-extensions.svg?style=flat-square)](http://hhvm.h4cc.de/package/indigophp/doctrine-extensions)
+[![Total Downloads](https://img.shields.io/packagist/dt/indigophp/doctrine-extensions.svg?style=flat-square)](https://packagist.org/packages/indigophp/doctrine-extensions)
+[![Dependency Status](https://img.shields.io/versioneye/d/php/indigophp:skeleton.svg?style=flat-square)](https://www.versioneye.com/php/indigophp:skeleton)
 
-**Doctrine Extensions.**
+**Various doctrine extensions.**
 
 
 ## Install
 
 Via Composer
 
-``` json
-{
-    "require": {
-        "indigophp/doctrine-extensions": "@stable"
-    }
-}
+``` bash
+$ composer require indigophp/doctrine-extensions
 ```
 
 
@@ -27,13 +27,13 @@ Via Composer
 ## Testing
 
 ``` bash
-$ codecept run
+$ phpspec run
 ```
 
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/indigophp/doctrine-extensions/blob/develop/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 
 ## Credits
@@ -44,4 +44,4 @@ Please see [CONTRIBUTING](https://github.com/indigophp/doctrine-extensions/blob/
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/indigophp/doctrine-extensions/blob/develop/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
