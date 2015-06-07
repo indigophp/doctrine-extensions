@@ -11,8 +11,6 @@
 
 namespace Indigo\Doctrine\Field;
 
-use Assert\Assertion;
-
 /**
  * Use this trait to implement Description field on entities
  *
@@ -44,8 +42,6 @@ trait Description
      */
     public function setDescription($description)
     {
-        Assertion::nullOrString($description);
-
         $this->description = $description;
     }
 }
