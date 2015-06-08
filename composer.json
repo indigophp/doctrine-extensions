@@ -11,11 +11,10 @@
         }
     ],
     "require": {
-        "php": ">=5.4"
+        "php": ">=5.4",
+        "doctrine/collections": "^1.0"
     },
     "require-dev": {
-        "doctrine/orm": "~2.4",
-        "gedmo/doctrine-extensions": "~2.3",
         "phpspec/phpspec": "~2.1",
         "henrikbjorn/phpspec-code-coverage" : "~1.0"
     },

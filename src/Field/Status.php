@@ -11,6 +11,8 @@
 
 namespace Indigo\Doctrine\Field;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Use this trait to implement enabled/disabled Status field on entities
  *

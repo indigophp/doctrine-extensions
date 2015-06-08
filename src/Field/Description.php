@@ -11,6 +11,8 @@
 
 namespace Indigo\Doctrine\Field;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Use this trait to implement Description field on entities
  *
