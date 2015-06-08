@@ -35,6 +35,11 @@ trait Data
     private $value;
 
     /**
+     * @var object
+     */
+    private $entity;
+
+    /**
      * Returns the key
      *
      * @return string
