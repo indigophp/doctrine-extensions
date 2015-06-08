@@ -14,7 +14,6 @@ namespace Indigo\Doctrine\Behavior\EAV;
 use Doctrine\Common\Collections\Selectable;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping as ORM;
-use Indigo\Doctrine\Field;
 
 /**
  * Use this trait to implement Entity part of EAV behavior on entities
@@ -23,8 +22,6 @@ use Indigo\Doctrine\Field;
  */
 trait Entity
 {
-    use Field\Id;
-
     /**
      * @var Selectable
      */
