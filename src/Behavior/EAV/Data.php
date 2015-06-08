@@ -35,11 +35,6 @@ trait Data
     private $value;
 
     /**
-     * @var object
-     */
-    private $entity;
-
-    /**
      * Returns the key
      *
      * @return string
@@ -74,10 +69,7 @@ trait Data
      *
      * @internal
      */
-    public function remove()
-    {
-        unset($this->entity);
-    }
+    abstract public function remove();
 
     /**
      * Creates a new object with a key

@@ -23,11 +23,6 @@ use Doctrine\ORM\Mapping as ORM;
 trait Entity
 {
     /**
-     * @var Selectable
-     */
-    private $data;
-
-    /**
      * Returns data for a given key (or the whole data set) or default value
      *
      * @param string|null $key
@@ -40,7 +35,7 @@ trait Entity
         if (is_null($key)) {
             $data = [];
 
-            foreach ($this->data as $key => $value) {
+            foreach ($this->getDataCollection() as $key => $value) {
                 $data[$key] = $value->getValue();
             }
 
@@ -81,7 +76,7 @@ trait Entity
         $data = $this->findData($key);
 
         if (isset($data)) {
-            $this->data->removeElement($data);
+            $this->getDataCollection()->removeElement($data);
             $data->remove();
 
             return true;
@@ -102,7 +97,7 @@ trait Entity
         $criteria = Criteria::create()
             ->where(Criteria::expr()->eq('key', $key));
 
-        $result = $this->data->matching($criteria);
+        $result = $this->getDataCollection()->matching($criteria);
 
         if (is_array($result)) {
             $result = reset($result);
@@ -110,6 +105,13 @@ trait Entity
             return $result;
         }
     }
+
+    /**
+     * Returns the data collection
+     *
+     * @return Selectable
+     */
+    abstract protected function getDataCollection();
 
     /**
      * Creates a data object with a key
