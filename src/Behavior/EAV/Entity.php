@@ -77,7 +77,6 @@ trait Entity
 
         if (isset($data)) {
             $this->getDataCollection()->removeElement($data);
-            $data->remove();
 
             return true;
         }

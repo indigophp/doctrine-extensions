@@ -65,13 +65,6 @@ trait Data
     }
 
     /**
-     * Removes the entity
-     *
-     * @internal
-     */
-    abstract public function remove();
-
-    /**
      * Creates a new object with a key
      *
      * @param string $key
