@@ -62,6 +62,7 @@ class EavListener implements EventSubscriber
         if (isset($this->classes[$cm->name])) {
             $mapping = [
                 'targetEntity'  => $this->classes[$cm->name],
+                'fieldName'     => 'data',
                 'mappedBy'      => 'entity',
                 'cascade'       => ['persist', 'remove'],
                 'orphanRemoval' => true,
@@ -71,22 +72,15 @@ class EavListener implements EventSubscriber
         } elseif (in_array($cm->name, $this->classes)) {
             $mapping = [
                 'targetEntity' => array_search($cm->name, $this->classes),
+                'fieldName'    => 'entity',
                 'inversedBy'   => 'data',
             ];
 
-            $cm->mapOneToMany($mapping);
-        }
+            $cm->mapManyToOne($mapping);
 
-        foreach ($cm->associationMappings as $mapping) {
-            if (isset($this->resolveTargetEntities[$mapping['targetEntity']])) {
-                $this->remapAssociation($cm, $mapping);
-            }
-        }
-
-        foreach ($this->resolveTargetEntities as $interface => $data) {
-            if ($data['targetEntity'] == $cm->getName()) {
-                $args->getEntityManager()->getMetadataFactory()->setMetadataFor($interface, $cm);
-            }
+            $cm->table['uniqueConstraints']['eav_data_idx'] = [
+                'columns' => ['entity_id', 'key'],
+            ];
         }
     }
 }
