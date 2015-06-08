@@ -28,15 +28,25 @@ trait Entity
     private $data;
 
     /**
-     * Returns data for a given key or default value
+     * Returns data for a given key (or the whole data set) or default value
      *
-     * @param string $key
-     * @param mixed  $default
+     * @param string|null $key
+     * @param mixed|null  $default
      *
      * @return mixed
      */
-    public function getData($key, $default = null)
+    public function getData($key = null, $default = null)
     {
+        if (is_null($key)) {
+            $data = [];
+
+            foreach ($this->data as $key => $value) {
+                $data[$key] = $value->getValue();
+            }
+
+            return $data;
+        }
+
         $data = $this->findData($key);
 
         return isset($data) ? $data->geteValue() : $default;
