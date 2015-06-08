@@ -35,6 +35,11 @@ trait Data
     private $value;
 
     /**
+     * @var object
+     */
+    private $entity;
+
+    /**
      * Returns the key
      *
      * @return string
@@ -62,6 +67,16 @@ trait Data
     public function setValue($value)
     {
         $this->value = $value;
+    }
+
+    /**
+     * Removes the entity
+     *
+     * @internal
+     */
+    public function remove()
+    {
+        unset($this->entity);
     }
 
     /**
